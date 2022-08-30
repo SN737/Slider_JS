@@ -5,10 +5,31 @@ const city = document.querySelector('.squares__city');
 const apart = document.querySelector('.squares__apart');
 const repaitTime = document.querySelector('.squares__rep-time');
 const costTime = document.querySelector('.squares__rep-cost');
-let pos = -1;
+const point1 = document.querySelector('.nav-point__one');
+const point2 = document.querySelector('.nav-point__two');
+const point3 = document.querySelector('.nav-point__three');
+const linkTitle1 = document.querySelector('.image__title1');
+const linkTitle2 = document.querySelector('.image__title2');
+const linkTitle3 = document.querySelector('.image__title3');
+let pos;
+
 document.addEventListener('DOMContentLoaded', ()=>{
-    imgRender(0);    
+    imgRender(0);     
 });
+point1.addEventListener('click', ()=>{
+    imgRender(0)});
+point2.addEventListener('click', ()=>{
+    imgRender(1)});
+point3.addEventListener('click', ()=>{
+    imgRender(2)});
+linkTitle1.addEventListener('click', ()=>{
+    imgRender(0)});
+linkTitle2.addEventListener('click', ()=>{
+    imgRender(1)});
+linkTitle3.addEventListener('click', ()=>{
+    imgRender(2);
+});    
+    
 
 const sliderArray = [
 {image:'./img/img1.png',
@@ -55,5 +76,4 @@ function imgRender(pos){
     apart.innerHTML = `<h3 class="orange-text">apartment area:</h3><span>${sliderArray[pos].area} m2</span></div>`;
     repaitTime.innerHTML = `<h3 class="orange-text">Repair time:</h3><span>${sliderArray[pos].time}</span>`;
     costTime.innerHTML = `<h3 class="orange-text">Repair Cost:</h3><span>Upon request</span>`;
-
 }

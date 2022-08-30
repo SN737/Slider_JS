@@ -159,9 +159,15 @@ body {
  width: 10px;
  height: 10px;   
  border-radius: 50px;
- background-color: #FFFFFF;
+ background-color: #ffffff4b;
  margin: 8px;
  cursor: pointer;
+}
+
+.nav-point:hover{
+    background-color: #ffffff;
+    transform: scale(1.25);
+
 }
 .orange-text {
     color:#E3B873;
