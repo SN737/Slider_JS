@@ -66,7 +66,7 @@ body {
 .title{
     /* width: 35vw; */
     height: 5vw;
-    background-color: aqua;
+    background-color: rgb(34, 75, 75);
 }
 .description{
     height: 5vw;
@@ -107,7 +107,26 @@ body {
 .slider-footer__nav{
     width: 28vw;
     height: 5vw;
-    background-color: cornsilk;
+    background-color: rgb(52, 52, 51);
+    display: flex;
+    justify-content: center;
+}
+.nav-arrow__left{
+    margin: 8px;
+    
+}
+.nav-arrow__right{
+    margin: 8px;
+    pi
+    
+}
+
+.nav-point{
+ width: 10px;
+ height: 10px;   
+ border-radius: 50px;
+ background-color: #FFFFFF;
+ margin: 8px;
 }
 
 
