@@ -1,5 +1,14 @@
-body {
-    
+@font-face {
+    src: url("./fonts/NunitoSans-Regular.ttf");
+    font-family:"NunitoSans";
+}
+
+@font-face {
+    src: url("./fonts/YesevaOne-Regular.ttf");
+    font-family:"YesevaOne";
+}
+
+body {    
      margin: 0 auto;
      font-family: NunitoSans, Arial;
      overflow-x: hidden;
@@ -23,43 +32,49 @@ body {
     margin: 5vw;
     margin-bottom: 0;
     background-color: #E3B873;
-    height: 100px;
+    height: 50px;
     display: flex;
     align-content: flex-end;
-    justify-content: right;
+    /* justify-content: right; */
+}
+.nav-items__wrapper{
+    display: flex;
+    margin-left: 23vw;
+    padding-top: 1vw;
 }
 .image__title1{
     width: 10vw;
     background-color: deeppink;
-    height: 99px;
+    /* height: 3vw; */
 }
 .image__title2{
     width: 10vw;
     background-color: rgba(255, 20, 145, 0.654);
-    height: 99px;
+    /* height: 99px; */
 }
 .image__title3{
     width: 10vw;
     background-color: rgba(255, 20, 145, 0.351);
-    height: 99px;
+    /* height: 99px; */
 }
 
 .main-content{
     background-color: rgb(0, 0, 0);
-    height: 40vw;
+    height: 30vw;
     display: flex;
 }
 .slider-table{
     display: flex;
     flex-flow: column;
-    height: 35vw;
-    width: 30vw;
+    /* height: 30vw; */
+    width: 23vw;
     margin-left: 5vw;
     background-color: blueviolet;
 }
 .slider-images{
-    height: 35vw;
+    height: 27vw;
     width: 34vw;
+    margin-top: 1vw;
     margin-right: 5vw;
     background-color: darkmagenta;
 }
@@ -69,47 +84,50 @@ body {
     background-color: rgb(34, 75, 75);
 }
 .description{
-    height: 5vw;
+    height: 6vw;
     background-color: rgb(26, 59, 59);
 }
 .squares{
-    height: 20vw;
+    height: 13vw;
     background-color: blue;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     overflow: hidden;
+    font-family: YesevaOne;
+    font-size: 16px;
+    color: #FFFFFF;
 }
 .squares__city{
-    height: 10vw;
-    width: 14vw;
+    height: 6vw;
+    width: 10vw;
     background-color: darkcyan;
 }
 .squares__apart{
-    height: 10vw;
-    width: 14vw;
+    height: 6vw;
+    width: 10vw;
     background-color: darkgoldenrod;
    
 }
 .squares__rep-time{
-    height: 10vw;
-    width: 14vw;
+    height: 6vw;
+    width: 10vw;
     background-color: darkgray;
 }
 
 .squares__rep-cost{
-    height: 10vw;
-    width: 14vw;
+    height: 6vw;
+    width: 10vw;
     background-color: darkgreen;
 
 }
 
 .slider-footer__nav{
-    width: 28vw;
+    width: 23vw;
     height: 5vw;
     background-color: rgb(52, 52, 51);
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 .nav-arrow__left{
     margin: 8px;
@@ -130,33 +148,9 @@ body {
  margin: 8px;
  cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .wrapper2 {
-    padding-top: 7vw;
-    padding-left: 5vw;
-    display: grid;
-    grid-template-columns: 200px 200px;
-    grid-template-rows: repeat(6, 100px);
-    row-gap: 1.2vw;
-} */
-
 .orange-text {
     color:#E3B873;
+    font-size: 18px;
     font-family: YesevaOne;
     text-transform: uppercase;
 }
@@ -183,50 +177,11 @@ body {
 } */
 h1,p,a {
     color: #FFFFFF;
+    
 }
-
-
-/* 
-.control {
-    grid-column: span 2;
-    justify-content: space-between;
-    padding: 0.5vw 80px 20px 0;
-}
-
-.control__indicator{
-   width: 9.5px;
-   height: 9.5px;
-   border-radius:30px;
-   background: rgba(255, 255, 255, 0.3);
-}
-
-.control__indicator:hover{
-    background-color: #FFFFFF;
-}
-
-.wrapper2-2--grid-item__item-10 {
-    grid-column: span 3;
-    max-width: 35vw;
-    padding-top: 2vw;
-}
-
-.wrapper2-2--grid-item__item-11{
-    padding-top: 3vw;
-}
-.wrapper2-2 {
-    padding-left: 7vw;
-    width: 35vw;
-    height: 1074px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 100px);
-}
-
-.img2 {
-    width: 35vw;  
-} */
 
 .white-nunito{
     color:#FFFFFF;
     font-family: NunitoSans;
+    
 }

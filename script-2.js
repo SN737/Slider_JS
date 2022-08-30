@@ -7,15 +7,13 @@ const repaitTime = document.querySelector('.squares__rep-time');
 const costTime = document.querySelector('.squares__rep-cost');
 let pos = -1;
 document.addEventListener('DOMContentLoaded', ()=>{
-    imgRender(0);
-    // image.innerHTML =  `<img src="./img/img1.png" alt="тут был картинке"></img>`;
-    
+    imgRender(0);    
 });
 
 const sliderArray = [
 {image:'./img/img1.png',
 city: 'Rostov-on-Don ',
-cityPlace: 'LCD Admiral',
+cityPlace:'LCD Admiral',
 area: '81',
 time: '3.5 months', 
 cost: 'upon request'},
@@ -53,7 +51,7 @@ leftBtn.addEventListener('click', ()=>{
 function imgRender(pos){
     // start.remove();      
     image.innerHTML = `<img src="${sliderArray[pos].image}" alt="тут должен быть картинке"></img>`;
-    city.innerHTML = `<h3 class="orange-text">City:</h3><span>${sliderArray[pos].city}<br>{${sliderArray[pos].cityPlace}}</span>`;
+    city.innerHTML = `<h3 class="orange-text">City:</h3><span>${sliderArray[pos].city}<br>${sliderArray[pos].cityPlace}</span>`;
     apart.innerHTML = `<h3 class="orange-text">apartment area:</h3><span>${sliderArray[pos].area} m2</span></div>`;
     repaitTime.innerHTML = `<h3 class="orange-text">Repair time:</h3><span>${sliderArray[pos].time}</span>`;
     costTime.innerHTML = `<h3 class="orange-text">Repair Cost:</h3><span>Upon request</span>`;
