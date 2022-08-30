@@ -113,11 +113,12 @@ body {
 }
 .nav-arrow__left{
     margin: 8px;
+    cursor: pointer;
     
 }
 .nav-arrow__right{
     margin: 8px;
-    pi
+    cursor: pointer;
     
 }
 
@@ -127,6 +128,7 @@ body {
  border-radius: 50px;
  background-color: #FFFFFF;
  margin: 8px;
+ cursor: pointer;
 }
 
 
