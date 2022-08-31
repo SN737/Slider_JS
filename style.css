@@ -83,8 +83,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow: hidden;
-    /* font-family: YesevaOne; */
+    overflow: hidden;    
     font-size: 16px;
     color: #FFFFFF;
 }
