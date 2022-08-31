@@ -1,9 +1,9 @@
 const image = document.querySelector('.slider-images');
-const leftBtn = document.querySelector('.nav-arrow__left');
-const rightBtn = document.querySelector('.nav-arrow__right');
+const leftArrow = document.querySelector('.nav-arrow__left');
+const rightArrow = document.querySelector('.nav-arrow__right');
 const city = document.querySelector('.squares__city');
 const apart = document.querySelector('.squares__apart');
-const repaitTime = document.querySelector('.squares__rep-time');
+const repairTime = document.querySelector('.squares__rep-time');
 const costTime = document.querySelector('.squares__rep-cost');
 const point1 = document.querySelector('.nav-point__one');
 const point2 = document.querySelector('.nav-point__two');
@@ -11,11 +11,14 @@ const point3 = document.querySelector('.nav-point__three');
 const linkTitle1 = document.querySelector('.image__title1');
 const linkTitle2 = document.querySelector('.image__title2');
 const linkTitle3 = document.querySelector('.image__title3');
-let pos;
+let pos=0;
 
+//старутуем с первого слайда сразу. 
 document.addEventListener('DOMContentLoaded', ()=>{
-    imgRender(0);     
+    imgRender(pos);     
 });
+
+//слушаем клики на точки, пункты меню в навигации слайдера
 point1.addEventListener('click', ()=>{
     imgRender(0)});
 point2.addEventListener('click', ()=>{
@@ -31,6 +34,7 @@ linkTitle3.addEventListener('click', ()=>{
 });    
     
 
+//массив слайдов и описаний
 const sliderArray = [
 {image:'./img/img1.png',
 city: 'Rostov-on-Don ',
@@ -51,8 +55,8 @@ area: '93',
 time: '3 months', 
 cost: 'upon request'}];
 
-rightBtn.addEventListener('click', ()=>{
-    
+//слушаем стрелку вправо 
+rightArrow.addEventListener('click', ()=>{    
     if(sliderArray.length-1 > pos){    
     pos++;
     imgRender(pos);}
@@ -60,7 +64,8 @@ rightBtn.addEventListener('click', ()=>{
         imgRender(pos);}    
 });
 
-leftBtn.addEventListener('click', ()=>{
+//слушаем стрелку влево 
+leftArrow.addEventListener('click', ()=>{
     if(pos > 0){   
     pos--;
     imgRender(pos);}
@@ -68,12 +73,32 @@ leftBtn.addEventListener('click', ()=>{
         imgRender(pos);}
 });
 
-
-function imgRender(pos){
-    // start.remove();      
+// отрисовываем изменения - саму картинку + описания
+function imgRender(pos){       
     image.innerHTML = `<img src="${sliderArray[pos].image}" alt="тут должен быть картинке"></img>`;
     city.innerHTML = `<h3 class="orange-text">City:</h3><span>${sliderArray[pos].city}<br>${sliderArray[pos].cityPlace}</span>`;
     apart.innerHTML = `<h3 class="orange-text">apartment area:</h3><span>${sliderArray[pos].area} m2</span></div>`;
-    repaitTime.innerHTML = `<h3 class="orange-text">Repair time:</h3><span>${sliderArray[pos].time}</span>`;
+    repairTime.innerHTML = `<h3 class="orange-text">Repair time:</h3><span>${sliderArray[pos].time}</span>`;
     costTime.innerHTML = `<h3 class="orange-text">Repair Cost:</h3><span>Upon request</span>`;
+    makeActive(pos);
+}
+
+// подсвечиваем точки и пункты меню активного слайда.
+function makeActive(pos){
+    point1.classList.remove('active');
+    point2.classList.remove('active');
+    point3.classList.remove('active');
+    linkTitle1.classList.remove('active-nav');
+    linkTitle2.classList.remove('active-nav');
+    linkTitle3.classList.remove('active-nav');
+    
+    if (pos+1 == 1){
+        point1.classList.toggle('active');
+        linkTitle1.classList.toggle('active-nav');        
+    }else if ((pos+1) == 2){
+        point2.classList.toggle('active'); 
+        linkTitle2.classList.toggle('active-nav');               
+    }else{point3.classList.toggle('active');
+    linkTitle3.classList.toggle('active-nav');
+ }
 }
