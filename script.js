@@ -75,7 +75,7 @@ leftArrow.addEventListener('click', ()=>{
 
 // отрисовываем изменения - саму картинку + описания
 function imgRender(pos){       
-    image.innerHTML = `<img src="${sliderArray[pos].image}" alt="тут должен быть картинке"></img>`;
+    image.innerHTML = `<img src="${sliderArray[pos].image}" alt="картинки слайдера"></img>`;
     city.innerHTML = `<h3 class="orange-text">City:</h3><span>${sliderArray[pos].city}<br>${sliderArray[pos].cityPlace}</span>`;
     apart.innerHTML = `<h3 class="orange-text">apartment area:</h3><span>${sliderArray[pos].area} m2</span></div>`;
     repairTime.innerHTML = `<h3 class="orange-text">Repair time:</h3><span>${sliderArray[pos].time}</span>`;
